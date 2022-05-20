@@ -1,9 +1,11 @@
 //
 //  ContentView.swift
-//  Memorize
+//  Assignment 1
 //
-//  Created by Christopher Koski on 5/16/22.
+//  Created by Christopher Koski on 5/17/22.
 //
+
+import SwiftUI
 
 import SwiftUI
 
@@ -23,10 +25,8 @@ struct ContentView: View {
         }
       }
     }
-    .foregroundColor(.red)
     .padding(.horizontal)
   }
-  
 }
 
 struct CardView: View {
@@ -50,11 +50,10 @@ struct CardView: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    
+    let game = EmojiMemoryGame()
     ContentView(viewModel: game)
-      .previewInterfaceOrientation(.portrait)
+      .previewInterfaceOrientation(.portraitUpsideDown)
     ContentView(viewModel: game)
       .preferredColorScheme(.dark)
   }
 }
-
