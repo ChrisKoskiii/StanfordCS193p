@@ -12,4 +12,11 @@ struct Theme {
   var emojis: Array<String>
   var numberOfPairs: Int
   var color: String
+  
+  init(name: String, emojis: Array<String>, numberOfPairs: Int, color: String) {
+    self.name = name
+    self.emojis = emojis
+    self.numberOfPairs = numberOfPairs > emojis.count ? emojis.count : numberOfPairs
+    self.color = color
+  }
 }
